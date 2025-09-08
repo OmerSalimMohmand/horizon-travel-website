@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+
+    <style>
+      body {
+        background-image: url("./travel_website_bg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+
+      /* Basic CSS for the navigation bar */
+
+      nav {
+        background-color: #272626;
+        display: flex;
+        align-items: center;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding-left: 400px;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 10px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      aside {
+        width: 10%;
+        float: left;
+      }
+
+      #media_links {
+        margin-top: 270px;
+      }
+
+      #media_links i {
+        font-size: 24px;
+        padding: 5px;
+      }
+
+      main {
+        width: 90%;
+        float: right;
+      }
+
+      main h1 {
+        font-size: 50px;
+      }
+      article {
+        background-color: rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 3px 1px lightgray;
+        border-radius: 5px;
+        padding: 7px;
+      }
+
+      #aboutArticle {
+        width: 95%;
+      }
+
+      #aboutArticle p {
+        font-size: 16px;
+        text-align: justify;
+      }
+
+      #teamDiv {
+        width: 80%;
+        margin-left: 7%;
+        margin-top: 80px;
+        padding: 7px;
+      }
+
+      #teamDiv table {
+        width: 100%;
+      }
+
+      #teamDiv h1 {
+        font-size: 40px;
+        text-align: left;
+      }
+
+      .profileArticle {
+        width: 85%;
+      }
+
+      .profileArticle h5 {
+        margin: 5px;
+      }
+
+      .profileArticle div {
+        display: flex;
+        justify-content: center;
+      }
+      .profileArticle button {
+        background-color: darkslateblue;
+        color: white;
+        font-weight: 600;
+        border-radius: 3px;
+        border: none;
+        padding-top: 5px;
+        padding-right: 30px;
+        padding-bottom: 5px;
+        padding-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <i class="fa-brands fa-telegram fa-spin fa-spin-reverse"></i>
+        Horizon Travel
+      </h1>
+      <ul>
+        <li><a href="./index.html" id="home">Home </a></li>
+        <li><a href="./about.html" id="home">About </a></li>
+        <li><a href="./contact.html" id="contact">Contact Us </a></li>
+      </ul>
+    </nav>
+    <aside>
+      <div id="media_links">
+        <div><i class="fa-brands fa-square-twitter"></i></div>
+        <div><i class="fa-brands fa-facebook"></i></div>
+        <div><i class="fa-brands fa-instagram"></i></div>
+        <div><i class="fa-brands fa-youtube"></i></div>
+      </div>
+    </aside>
+    <main>
+      <h1>About Us</h1>
+      <article id="aboutArticle">
+        <p>
+          At Horizon Travel, we believe every journey should be as unique as the
+          traveler themselves. We're not just about booking flights and hotels;
+          we're about unlocking new horizons and creating memories that last a
+          lifetime. Our mission is to transform the often-overwhelming process
+          of travel planning into an inspiring and effortless experience.
+        </p>
+        <p>
+          Feel free to explore our website to know more about what we offer!
+        </p>
+      </article>
+      <div id="teamDiv">
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                <h1>
+                  Our <br />
+                  Team
+                </h1>
+              </th>
+              <td>
+                <article class="profileArticle">
+                  <h5><i class="fa-solid fa-user"></i> Omer Salim</h5>
+                  <small>Omer Salim is responsible<br />for...</small>
+                  <br />
+                  <div><button>CEO</button></div>
+                </article>
+              </td>
+              <td>
+                <article class="profileArticle">
+                  <h5><i class="fa-solid fa-user"></i> John Doe</h5>
+                  <small>John Doe is responsible<br />for...</small>
+                  <br />
+                  <div><button>Team Lead</button></div>
+                </article>
+              </td>
+              <td>
+                <article class="profileArticle">
+                  <h5><i class="fa-solid fa-user"></i> Mike Tyson</h5>
+                  <small>Mike Tyson is responsible<br />for...</small>
+                  <br />
+                  <div><button>Delivery Head</button></div>
+                </article>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

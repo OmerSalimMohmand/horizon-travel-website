@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>About Us</title>
 
     <link
       rel="stylesheet"
@@ -27,12 +27,11 @@
         background-color: #272626;
         display: flex;
         align-items: center;
-        justify-content: space-between;
       }
 
       nav ul {
         list-style-type: none;
-        /* padding: 0; */
+        padding-left: 400px;
       }
 
       nav ul li {
@@ -44,28 +43,6 @@
         text-decoration: none;
         color: white;
         font-weight: bold;
-      }
-
-      #search_span {
-        background-color: white;
-        padding-top: 10px;
-        padding-right: 25px;
-        padding-bottom: 10px;
-        padding-left: 25px;
-        border-radius: 50px;
-      }
-
-      #search_span input {
-        border: none;
-        width: 200px;
-      }
-
-      #search_span button {
-        background-color: darkslategray;
-        border-radius: 5px;
-        padding: 5px;
-        color: white;
-        border: none;
       }
 
       aside {
@@ -86,8 +63,27 @@
         width: 90%;
         float: right;
       }
+
+      #content_left {
+        float: left;
+        width: 50%;
+        height: 100px;
+        padding-top: 220px;
+      }
+
+      #content_left h1 {
+        font-size: 60px;
+        text-transform: uppercase;
+      }
+
+      #content_right {
+        float: right;
+        width: 50%;
+        height: 100px;
+      }
+
       article {
-        width: 500px;
+        width: 95%;
         background-color: rgba(0, 0, 0, 0.3);
         box-shadow: 0px 0px 3px 1px lightgray;
         border-radius: 5px;
@@ -95,22 +91,35 @@
         margin-top: 100px;
       }
 
-      article h1 {
-        font-size: 50px;
-        text-transform: uppercase;
-      }
-
-      article p {
-        font-size: 18px;
-        text-align: justify;
-      }
-
-      article button {
-        background-color: darkslategray;
-        color: white;
+      input,
+      textarea,
+      button {
+        width: 96%;
+        margin-left: 2%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid gray;
         border-radius: 3px;
+        background: none;
+        color: white;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: lightgray;
+        opacity: 1;
+      }
+
+      button {
+        background-color: darkslategray;
         border: none;
+        color: white;
         padding: 5px;
+      }
+
+      label {
+        margin-left: 2%;
+        font-size: small;
       }
     </style>
   </head>
@@ -125,20 +134,6 @@
         <li><a href="./about.html" id="home">About </a></li>
         <li><a href="./contact.html" id="contact">Contact Us </a></li>
       </ul>
-      <ul>
-        <li>
-          <span id="search_span">
-            <input
-              type="text"
-              id="conditionInput"
-              placeholder="Enter a destination or keyword"
-            />
-            <i class="fa fa-search" style="color: darkslategray"></i>
-            <button id="btnSearch">Search</button>
-            <button id="btnClear">Clear</button>
-          </span>
-        </li>
-      </ul>
     </nav>
     <aside>
       <div id="media_links">
@@ -149,17 +144,42 @@
       </div>
     </aside>
     <main>
-      <article>
-        <h1>Explore your dream destination</h1>
-        <p>Your Personalized Travel Journey Starts Here!</p>
-        <p>
-          Welcome to your new favorite travel companion! We believe the best
-          adventures are the ones tailored just for you. Our mission is to
-          transform the overwhelming process of travel planning into an
-          exciting, effortless experience.
-        </p>
-        <button type="button">BOOK NOW</button>
-      </article>
+      <div id="content_left">
+        <h1>Contact Us</h1>
+        <p>Get in touch</p>
+      </div>
+      <div id="content_right">
+        <article>
+          <form action="submit">
+            <label for="name">Name</label><br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+            />
+            <br />
+            <label for="email">Email</label> <br />
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+            />
+            <br />
+            <label for="message">Message</label> <br />
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Enter your message"
+            ></textarea>
+            <br />
+            <button id="submitMessage">Submit</button>
+          </form>
+        </article>
+      </div>
     </main>
   </body>
 </html>
