@@ -1,0 +1,167 @@
+body {
+  background-image: url("./images/travel_website_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* Basic CSS for the navigation bar */
+
+nav {
+  background-color: #272626;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  /* padding: 0; */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+#search_span {
+  background-color: white;
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  border-radius: 50px;
+}
+
+#search_span input {
+  border: none;
+  width: 200px;
+}
+
+#search_span button {
+  background-color: #086666;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+aside {
+  width: 10%;
+  float: left;
+}
+
+#media_links {
+  margin-top: 270px;
+}
+
+#media_links i {
+  font-size: 24px;
+  padding: 5px;
+}
+
+main {
+  width: 90%;
+  float: right;
+}
+
+article {
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 3px 1px lightgray;
+  border-radius: 5px;
+  padding: 7px;
+  margin-top: 100px;
+}
+
+article h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+article p {
+  font-size: 18px;
+  text-align: justify;
+}
+
+article button {
+  background-color: #086666;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Style the modal box itself */
+#modalSearch {
+  border: none;
+  background: none;
+  width: 450px;
+  height: 80vh;
+  margin: 100px 25px auto auto;
+}
+
+/* background overlay */
+#modalSearch::backdrop {
+  background: rgba(0, 0, 0, 0);
+  /* backdrop-filter: blur(1px); */
+}
+
+.timeZoneDiv {
+  background: #086666;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: white;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.recommendation {
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.recommendation img {
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.recommendation h3 {
+  padding-inline: 10px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.recommendation p {
+  padding-inline: 10px;
+  font-size: smaller;
+  color: darkgray;
+}
+
+.recommendation button {
+  background-color: #086666;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding-inline: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
