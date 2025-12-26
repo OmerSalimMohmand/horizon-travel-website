@@ -6,7 +6,8 @@ const modalSearch = document.getElementById("modalSearch");
 const foundDestinations = [];
 
 function searchKeyword() {
-  modalSearch.innerHTML = "";
+
+  const inputString = keywordInput.value.trim().toLowerCase()
 
   fetch("./travel_recommendation_api.json")
     .then((response) => response.json())
@@ -15,23 +16,19 @@ function searchKeyword() {
       for (destination in data) {
         if (destination == "countries") {
           for (country of data.countries) {
-            const foundCities = country.cities.filter((city) =>
-              city.name.toLowerCase().includes(keywordInput.value.toLowerCase())
-            );
+            const foundCities = country.cities?.filter((city) => city.name.toLowerCase().includes(inputString));
             // const foundCitiesWithTimeZone = foundCities.map((city) => ({...city, timeZone: getTimeZoneByCity(city.name.split(", ")[0]), })); // generating new array and new objects
             foundCities.map((city) => { city.timeZone = getTimeZoneByCity(city.name.split(", ")[0]); return city; }); // mutating the original array
             foundDestinations.push(...foundCities);
           }
         }
-        else if (destination.toLowerCase().includes(keywordInput.value.toLowerCase()))
+        else if (destination.toLowerCase().includes(inputString))
           foundDestinations.push(...data[destination]);
       }
       displayRecommendations();
     })
     .catch((error) => console.log("error while fetching data: ", error));
 }
-
-btnSearch.addEventListener("click", searchKeyword);
 
 function displayRecommendations() {
   if (foundDestinations.length !== 0) {
@@ -72,13 +69,16 @@ function getTimebyTimeZone(timeZone) {
   return timeString;
 }
 
+
+btnSearch.addEventListener("click", searchKeyword);
+btnClear.addEventListener("click", () => (keywordInput.value = ""));
+
 modalSearch.addEventListener("click", (e) => {
   // console.log(e.target)
   if (e.target === modalSearch) {
     modalSearch.close();
+    modalSearch.innerHTML = "";
     keywordInput.value = "";
     keywordInput.focus();
   }
 });
-
-btnClear.addEventListener("click", () => (keywordInput.value = ""));
