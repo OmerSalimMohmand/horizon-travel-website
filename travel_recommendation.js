@@ -69,7 +69,6 @@ function getTimebyTimeZone(timeZone) {
   return timeString;
 }
 
-
 btnSearch.addEventListener("click", searchKeyword);
 btnClear.addEventListener("click", () => (keywordInput.value = ""));
 
